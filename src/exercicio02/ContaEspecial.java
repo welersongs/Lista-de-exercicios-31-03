@@ -4,10 +4,10 @@ public class ContaEspecial extends ContaBancaria {
 	float limite;
 	
 	@Override
-	public void sacar(float valor) {
+	public void sacar(float valor) throws Exception {
 		if(valor > super.saldo) {
 			if( (valor - super.saldo) > limite) {
-				System.out.println("Erro");
+				throw new Exception("Valor é maior que o limite");
 			}
 		}
 		else {

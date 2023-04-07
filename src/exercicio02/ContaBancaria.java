@@ -6,9 +6,9 @@ public class ContaBancaria {
 	int numConta;
 	float saldo;
 	
-	public void sacar(float valor) {
+	public void sacar(float valor) throws Exception {
 		if(valor > this.saldo) {
-			System.out.println("Erro");
+			throw new Exception("Valor é maior que o saldo");
 		}
 		else {
 			this.saldo = this.saldo - valor;

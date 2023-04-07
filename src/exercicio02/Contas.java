@@ -9,7 +9,12 @@ public class Contas {
 		cb.numConta = 123456789;
 		cb.saldo = 1500f;
 		
-		//cb.sacar(100f);
+		try {
+			// cb.sacar(100f);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
 			
 		cb.depositar(2000f);
 		//System.out.println(cb.saldo);
